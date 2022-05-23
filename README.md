@@ -6,7 +6,7 @@ ___
 
 [![npm version](https://badge.fury.io/js/%40bornfight%2Fgocart.svg)](https://badge.fury.io/js/%40bornfight%2Fgocart)
 ![GitHub last commit](https://img.shields.io/github/last-commit/bornfight/gocart.js)
-![npm](https://img.shields.io/npm/dm/@bornfight/gocart)
+![npm](https://img.shields.io/npm/dm/@mugo-agency/gocart)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/bornfight/goCart.js/issues)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -48,13 +48,13 @@ Compiled code can be found in the `build` directory. The `src` directory contain
 ### 1. Install plugin  
   
 ```
-npm i @bornfight/gocart
+npm i @mugo-agency/gocart
 ``` 
 
 ### 2. Import goCart.js to your theme JS
 
 ```
-import GoCart from '@bornfight/gocart';
+import GoCart from '@mugo-agency/gocart';
 ```
 
 Or if you are not using any module bundler you can import goCart.js manually. Add `index.js` file from `build` folder (you can also rename it) to your theme `assets` folder.
@@ -74,7 +74,7 @@ If you are using SCSS you can find the SCSS file inside `src` folder: `src/lib/s
 You can also simply include it from `node_modules` like this:   
   
 ```
-@import "~@bornfight/gocart/src/lib/scss/go-cart";
+@import "~@mugo-agency/gocart/src/lib/scss/go-cart";
 ```  
   
 ### 4. Include `go-cart.liquid` file as section  
