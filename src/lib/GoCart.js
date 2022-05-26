@@ -87,7 +87,7 @@ class GoCart {
     init() {
 
         this.fetchCart();
-
+        
         if (this.isDrawerMode) {
             this.setDrawerDirection();
         }
@@ -276,7 +276,12 @@ class GoCart {
                 callback(cart);
             }
         }
-        const event = new CustomEvent("AjaxCart:fetchHandler", { bubbles: true });
+        const event = new CustomEvent("AjaxCart:fetchHandler", { 
+            bubbles: true,
+            detail: {
+                cart: cart
+            },
+         });
         this.cartDrawer.dispatchEvent(event);
     }
 
