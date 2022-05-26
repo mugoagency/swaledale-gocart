@@ -277,7 +277,7 @@ class GoCart {
             }
         }
         const event = new CustomEvent("AjaxCart:fetchHandler", { bubbles: true });
-        document.cartDrawer.dispatchEvent(event);
+        this.cartDrawer.dispatchEvent(event);
     }
 
     addItemToCartHandler(product) {
@@ -452,13 +452,13 @@ class GoCart {
 
     openCartDrawer() {
         const event = new CustomEvent("AjaxCart:open", { bubbles: true });
-        document.cartDrawer.dispatchEvent(event);
+        this.cartDrawer.dispatchEvent(event);
         this.cartDrawer.classList.add('is-open');
     }
 
     closeCartDrawer() {
         const event = new CustomEvent("AjaxCart:close", { bubbles: true });
-        document.cartDrawer.dispatchEvent(event);
+        this.cartDrawer.dispatchEvent(event);
         this.cartDrawer.classList.remove('is-open');
     }
 
