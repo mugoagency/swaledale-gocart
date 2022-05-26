@@ -276,6 +276,8 @@ class GoCart {
                 callback(cart);
             }
         }
+        const event = new CustomEvent("AjaxCart:fetchHandler", { bubbles: true });
+        this.cartDrawer.dispatchEvent(event);
     }
 
     addItemToCartHandler(product) {
@@ -449,10 +451,14 @@ class GoCart {
     }
 
     openCartDrawer() {
+        const event = new CustomEvent("AjaxCart:open", { bubbles: true });
+        this.cartDrawer.dispatchEvent(event);
         this.cartDrawer.classList.add('is-open');
     }
 
     closeCartDrawer() {
+        const event = new CustomEvent("AjaxCart:close", { bubbles: true });
+        this.cartDrawer.dispatchEvent(event);
         this.cartDrawer.classList.remove('is-open');
     }
 
