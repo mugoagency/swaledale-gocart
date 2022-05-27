@@ -164,6 +164,12 @@ class GoCart {
     }
 
     fetchCart(callback) {
+
+        const eventStart = new CustomEvent("AjaxCart:fetchCartStart", { bubbles: true });
+        const eventEnd = new CustomEvent("AjaxCart:fetchCartEnd", { bubbles: true });
+        
+        this.cartDrawer.dispatchEvent(eventStart);
+
         window.fetch('/cart.js', {
             credentials: 'same-origin',
             method: 'GET',
@@ -174,6 +180,8 @@ class GoCart {
                 this.ajaxRequestFail();
                 throw new Error(error);
             });
+
+        this.cartDrawer.dispatchEvent(eventEnd);
     }
 
     addItemToCart(formID) {
