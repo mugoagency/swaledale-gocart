@@ -1,6 +1,6 @@
 /*!
  * 
- *   @mugo-agency/gocart v1.1.5
+ *   @mugo-agency/gocart v1.1.6
  *   
  * 
  *   Copyright (c) Bornfight (https://www.bornfight.com/)
